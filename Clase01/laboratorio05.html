@@ -1,0 +1,11 @@
+<body></body>
+<script>
+
+document.bgColor = "red";
+
+var imagen = document.createElement("img");  
+imagen.src = "home.png";
+imagen.ondblclick = function () { alert(document.bgColor); document.bgColor = "blue"; };
+document.body.appendChild(imagen);
+
+</script>
