@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio 01</title>
+</head>
+<body>
+
+<img src="diagrama01.png" alt="Diagrama 01">
+
+<script>
+
+//PSEUDO CODIGO
+
+/*
+1. Inicio
+2. Inicializar variables: A =0, B =0
+3. Solicitar la introducción de dos
+valores distintos
+4. Leer los dos valores
+5. Asignarlos a las variables A y B
+6. Si A = B Entonces vuelve a 3
+porque los valores deben ser
+distintos
+7. Si A>B Entonces
+ Escribir A, “Es el mayor”
+8. De lo contrario: Escribir B, “Es
+el mayor”
+9. Fin_Si
+10. Fin 
+*/
+var A = 0;
+var B = 0;
+
+	do {
+		alert("Introduzca 2 numeros diferentes");
+		var A = Number(prompt("Ingrese el primer numero (A)"));
+		var B = Number(prompt("Ingrese el segundo numero (B)"));
+	} while (A === B)
+
+	if(A > B) {
+		alert("El numero A es el mayor");
+	}
+	else {
+		alert("El numero B es el mayor");
+	}
+</script>
+
+</body>
+</html>
