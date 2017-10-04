@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Operadores</title>
+</head>
+<body>
+<h3>AND (&&)</h3>
+<p>Retorna true si ambas expresiones son verdaderas</p>
+<p id="and"></p>
+
+<h3>OR (||)</h3>
+<p>Retorna true si alguna de las expresiones es verdadera</p>
+<p id="or"></p>
+
+<h3>NOT (!)</h3>
+<p>Retorna true para una declaracion falsa y false para una declaracion verdadera</p>
+<p>!(Exp1 AND Exp2) ⇒  !Exp1 OR !Exp2</p>
+<p>!(Exp1 OR !Exp2)  ⇒  !Exp1 AND Exp2</p>
+<p>!(!Exp1 AND !Exp2 AND !Exp3) ⇒  Exp1 OR Exp2 OR Exp3</p>
+<p id="not"></p>
+<script type="text/javascript">
+
+/* Operador AND */
+var x = 6;
+var y = 3;
+
+document.querySelector("#and").innerHTML = 
+(x < 10 && y > 1) + "<br>" + 
+(x < 10 && y < 1);
+
+/* Operador OR*/
+
+document.getElementById("or").innerHTML = 
+(x == 5 || y == 5) + "<br>" + 
+(x == 6 || y == 0) + "<br>" + 
+(x == 0 || y == 3) + "<br>" + 
+(x == 6 || y == 3);
+
+/* Operador NOT*/
+
+document.getElementById("not").innerHTML = 
+!(x === y) + "<br>" + 
+!(x > y);
+</script>
+
+</body>
+</html>

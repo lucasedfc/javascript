@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Triangulo</title>
+</head>
+<body>
+<script type="text/javascript">
+	var lado1 = Number(prompt('Ingrese un lado'));
+	var lado2 = Number(prompt('Ingrese otro lado'));
+	var lado3 = Number(prompt('Ingrese otro lado'));
+ 
+		if(lado1 == lado2 && lado2 == lado3) { //lado1 == lado2 && lado2 == lado3 && lado1==lado3 es INNECESARIO.
+		    alert('El triangulo es equilatero');
+		}
+		else
+		{
+		    if(lado1 != lado2 && lado2 != lado3 && lado1 != lado3) {
+		        alert('El triangulo es escaleno');
+		    }
+		    else {
+		        alert('El triangulo es isosceles');
+		    }
+		}
+</script>
+
+</body>
+</html>

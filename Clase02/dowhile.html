@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>doWhile</title>
+</head>
+<body>
+<p id="number"></p>
+<script type="text/javascript">
+//Do While; Se repite al menos 1 vez
+
+/*
+
+do {
+    code block to be executed
+}
+while (condition);
+*/
+
+	var soltero = false;
+	do
+	{
+		alert('No me quiero casar !');
+	}
+	while(soltero);
+
+	var text = "";
+    var i = 0;
+    do {
+        text += "<br>The number is " + i;
+        i++;
+    }
+    while (i < 5);
+    document.getElementById("number").innerHTML = text;
+</script>
+</body>
+</html>

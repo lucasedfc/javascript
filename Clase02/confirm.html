@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Confirm</title>
+</head>
+<body>
+<script type="text/javascript">
+	/*****************************************/
+	alert('ingrese 2 numeros para sumarlos');
+	 
+	var nro1 = prompt('Ingrese un numero');
+	var nro2 = prompt('Ingrese otro numero');
+	 
+	alert(nro1 + nro2);
+
+	/*****************************************/
+
+	sumar = confirm("Ingrese 2 numero para sumar");
+
+	if(sumar) {
+		document.write(sumar); //true
+		var num1 = Number(prompt("Ingrese el primer numero"));
+		var num2 = Number(prompt("Ingrese el segundo numero"));
+
+		var resultado = (num1 + num2);
+		document.write("La suma es de: " + resultado );
+	}
+	else {
+		document.write(sumar); //false
+	}
+
+</script>
+
+</body>
+</html>

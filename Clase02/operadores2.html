@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Operaciones 2</title>
+</head>
+<body>
+
+<p id="today"></p>
+<script type="text/javascript">
+	var esDeudor = true;
+	var esDonante = false;
+
+	if(esDeudor) {
+		document.write("Es deudor" + "<br>");
+	}
+
+	if(!esDonante) {
+		//Si no es donante
+		document.write("No es donante");
+	}
+
+	/*
+	switch(expression) {
+	    case n:
+	        code block
+	        break;
+	    case n:
+	        code block
+	        break;
+	    default:
+	        code block
+	}
+	*/
+
+	var estadoCivil = prompt("Ingrese estado civil");
+	estadoCivil = estadoCivil.toLowerCase(); //pasar a minuscula
+
+
+	switch (estadoCivil) {
+		case 'soltero':
+			alert("Estado civil : Soltero");
+			break;
+		case 'casado':
+			alert("Estado civil : Casado");
+			break;
+		case 'divorciado':
+			alert("Estado civil : Divorciado");
+			break;
+		default:
+			alert("Estado civil : Default");
+	}
+
+
+	//Que dia es hoy?
+
+	switch (new Date().getDay()) {
+    case 0:
+        day = "Domingo";
+        break;
+    case 1:
+        day = "Lunes";
+        break;
+    case 2:
+        day = "Martes";
+        break;
+    case 3:
+        day = "Miercoles";
+        break;
+    case 4:
+        day = "Jueves";
+        break;
+    case 5:
+        day = "Viernes";
+        break;
+    case 6:
+        day = "Sabado";
+}
+document.getElementById("today").innerHTML = "Hoy es " + day;
+
+</script>
+
+</body>
+</html>
