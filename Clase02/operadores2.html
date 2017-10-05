@@ -42,7 +42,6 @@ VARIABLES
 	INICIO
 		IMPRIMIR "Ingrese estado civil"
 		LEER estadoCivil
-		ASIGNAR los 3 valores a las variables lado1, lado2 y lado3
 		SEGUN estadoCivil hacer
 		Caso = soltero
 			IMPRIMIR Estado civil soltero
@@ -62,6 +61,7 @@ VARIABLES
 
 	switch (estadoCivil) {
 		case 'soltero':
+			/*Bloque de codigo*/
 			alert("Estado civil : Soltero");
 			break;
 		case 'casado':
