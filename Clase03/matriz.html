@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Matriz modo directo</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+						//	0		1		2
+		var personas = [
+						["Juan", "Sanchez", 22], 	//0
+						["Maria", "Rodriguez", 23],	//1
+						["Florencia", "Sosa", 29],	//2
+						["Lucas", "Lopez", 32],		//3
+						["Pedro", "Alonso", 29],	//4
+						["Sabrina", "Gonzalez", 31]	//5
+					];
+
+		console.log("Hola soy " + personas[3][0] + " " + personas[3][1] + " y tengo " + personas[3][2] + " años");
+
+		personas[4][0] = "Nicolas";
+		personas[4][1] = "Perez";
+		personas[4][2] = 25;
+
+		personas[5] = ["Elisa", "Santos", 44];
+
+		console.log(personas);
+	</script>
+
+</body>
+</html>
