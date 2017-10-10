@@ -32,12 +32,36 @@
 	}
 	*/
 
+	//PSEUDO CODIGO
+
+/*
+
+VARIABLES
+	estadoCivil
+
+	INICIO
+		IMPRIMIR "Ingrese estado civil"
+		LEER estadoCivil
+		SEGUN estadoCivil hacer
+		Caso = soltero
+			IMPRIMIR Estado civil soltero
+		Caso = casado
+			IMPRIMIR Estado civil casado
+		Caso = divorciado
+			IMPRIMIR Estado civil divorciado
+		Caso SiNo
+			IMPRIMIR Estado civil Invalido
+		FIN SEGUN
+	FIN 
+
+*/
 	var estadoCivil = prompt("Ingrese estado civil");
 	estadoCivil = estadoCivil.toLowerCase(); //pasar a minuscula
 
 
 	switch (estadoCivil) {
 		case 'soltero':
+			/*Bloque de codigo*/
 			alert("Estado civil : Soltero");
 			break;
 		case 'casado':
@@ -47,11 +71,36 @@
 			alert("Estado civil : Divorciado");
 			break;
 		default:
-			alert("Estado civil : Default");
+			alert("Estado civil : Invalido");
 	}
 
 
 	//Que dia es hoy?
+
+	/*
+
+	INICIO
+		OBTENER dia
+		SEGUN dia hacer
+		Caso = 0
+			IMPRIMIR Hoy es Domingo
+		Caso = 1
+			IMPRIMIR Hoy es Lunes
+		Caso = 2
+			IMPRIMIR Hoy es Martes
+		Caso = 3
+			IMPRIMIR Hoy es Miercoles
+		Caso = 4
+			IMPRIMIR Hoy es Jueves
+		Caso = 5
+			IMPRIMIR Hoy es Viernes
+		Caso = 6
+			IMPRIMIR Hoy es Sabado
+		FIN SEGUN
+	FIN 
+
+
+	*/
 
 	switch (new Date().getDay()) {
     case 0:

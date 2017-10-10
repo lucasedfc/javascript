@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Avanzado 01</title>
+</head>
+<body>
+
+<script type="text/javascript">
+	var legajo;
+	if(confirm("Desea ejecutar el programa")) {
+		do {
+			legajo = prompt("Ingrese su legajo");
+		} while (legajo <= 0 || isNaN(legajo));
+		alert("Legajo correcto");
+		
+	}
+	else {
+		alert("Ejecucion cancelada");
+	}
+</script>
+
+</body>
+</html>
