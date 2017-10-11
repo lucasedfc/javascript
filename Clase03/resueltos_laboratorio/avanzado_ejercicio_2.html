@@ -1,0 +1,26 @@
+<body></body>
+<script>
+
+var caja1 = document.createElement("input");
+caja1.type = "text";
+caja1.placeholder = "Ingrese un numero";
+document.body.appendChild(caja1);
+
+var caja2 = document.createElement("input");
+caja2.type = "text";
+caja2.placeholder = "Ingrese un numero";
+document.body.appendChild(caja2);
+
+var boton = document.createElement("input");
+boton.type = "button";
+boton.value = "Sumar";
+boton.onclick = function () { 
+
+var suma = Number(caja1.value) + Number(caja2.value);
+alert('La suma es: ' + suma);
+
+};
+
+document.body.appendChild(boton);
+
+</script>

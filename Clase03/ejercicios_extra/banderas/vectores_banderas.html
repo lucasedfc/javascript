@@ -1,0 +1,14 @@
+<body></body>
+<script>
+
+	var banderas = new Array("argentina","francia","espana","alemania","reino_unido");
+	var imagen;
+	
+	for(i = 0; i < banderas.length; i++)
+	{
+		imagen = document.createElement("img"); 
+		imagen.src = "imagenes/" + banderas[i] + ".png";
+		document.body.appendChild(imagen);
+	}
+	
+</script>

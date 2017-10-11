@@ -1,0 +1,22 @@
+<body></body>
+<script>
+
+var imagen;
+
+for(var i = 5; i >= 0; i--)
+{
+	imagen = document.createElement("img"); 
+		
+	if(i != 0)
+	{
+		imagen.src = "imagenes/" + i + ".jpg";
+	}
+	else
+	{
+		imagen.src = "imagenes/blanca.jpg";
+	}
+		
+	document.body.appendChild(imagen);
+}
+	
+</script>

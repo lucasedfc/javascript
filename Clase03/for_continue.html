@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>For - Continue</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		var cadena = "Habia una vez un 'barco' chiquito";
+		var letras = cadena.split("");
+		var resultado = "";
+
+		for(var i = 0; i < letras.length; i++) {
+			alert("Letra: " + letras[i]);
+
+			if( letras[i] == "'") {
+				continue;
+			} 
+			else {
+				resultado += letras[i];
+			}
+		}
+
+		alert(resultado);
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<body></body>
+<script>
+ 
+var imagenCreada = false;
+var boton = document.createElement("input");
+boton.type = "button";
+boton.value = "Crear imagen";
+boton.onclick = function () {
+ 
+                if(!imagenCreada)
+                {
+                            var imagen = document.createElement("img");
+                            imagen.src = "home.png";
+ 
+                            document.body.appendChild(imagen);
+                
+                            imagenCreada = true;
+                }
+};
+ 
+document.body.appendChild(boton);
+ 
+</script>

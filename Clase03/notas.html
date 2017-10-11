@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Matrices - Notas</title>
+</head>
+<body>	
+
+	<script type="text/javascript">
+		
+		var notasCuatrimestes = new Array();
+ 
+			for (i = 0; i < 3; i++)
+			{
+			                notasCuatrimestes[i] = new Array();
+			}
+			                
+			notasCuatrimestes[0][0] = 8;
+			notasCuatrimestes[0][1] = 3;
+			notasCuatrimestes[0][2] = 5;
+			 
+			notasCuatrimestes[1][0] = 4;
+			notasCuatrimestes[1][1] = 3;
+			notasCuatrimestes[1][2] = 7;
+			                
+			notasCuatrimestes[2][0] = 2;
+			notasCuatrimestes[2][1] = 6;
+			notasCuatrimestes[2][2] = 10;
+
+
+			
+			for(var f = 0; f < notasCuatrimestes.length;f++)
+{
+				var sumaFilas = 0;
+                for(var c = 0; c < notasCuatrimestes.length;c++)
+                {
+                            document.write(notasCuatrimestes[f][c] + " ");
+                            sumaFilas = sumaFilas + notasCuatrimestes[f][c];
+                            
+                }
+
+                console.log("La suma es " + sumaFilas);
+                document.write("<br>");
+}
+ 
+	</script>
+
+</body>
+</html>

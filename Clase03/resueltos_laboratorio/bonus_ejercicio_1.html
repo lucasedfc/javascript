@@ -1,0 +1,31 @@
+<script>
+
+var numeros = new Array(8,5,2,7,15,4,3);
+
+// Punto A:
+var suma = 0;
+
+for(var i = 0; i < numeros.length; i++)
+{
+	if(numeros[i] % 2 == 1)
+	{
+		suma = suma + numeros[i];
+	}
+}
+
+alert('La suma es: ' + suma);
+
+// Punto B:
+var suma = 0;
+
+for(var i = 0; i < numeros.length; i++)
+{
+	if(i % 2 == 1)
+	{
+		suma = suma + numeros[i];
+	}
+}
+
+alert('La suma es: ' + suma);
+
+</script>

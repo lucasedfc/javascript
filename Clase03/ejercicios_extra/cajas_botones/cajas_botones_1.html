@@ -1,0 +1,16 @@
+<body></body>
+<script>
+
+	var caja = document.createElement("input"); 
+	caja.type = "text";
+	
+	document.body.appendChild(caja);
+	
+	var boton = document.createElement("input"); 
+	boton.type = "button";
+	boton.value = "Click aqui";
+	boton.onclick = function() { alert(caja.value); };
+
+	document.body.appendChild(boton);
+
+</script>

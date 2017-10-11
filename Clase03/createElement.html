@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Create Element</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		var caja = document.createElement("input");
+		caja.type= "text";
+		caja.placeholder="Ingrese un valor";
+		 
+		document.body.appendChild(caja);
+		 
+		var boton = document.createElement("input");
+		boton.type = "button";
+		boton.value = "Obtener el valor";
+		boton.onclick = function () {              alert(caja.value);           };
+		 
+		document.body.appendChild(boton);
+	</script>
+
+</body>
+</html>

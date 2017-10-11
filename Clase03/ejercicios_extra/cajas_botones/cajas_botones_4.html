@@ -1,0 +1,17 @@
+<body></body>
+<script>
+
+var caja = document.createElement("input");
+caja.type= "text";
+caja.placeholder= "Ingrese un color";
+
+document.body.appendChild(caja);
+
+var boton = document.createElement("input");
+boton.type = "button";
+boton.value = "Color fondo pagina";
+boton.onclick = function () { document.bgColor = caja.value };
+
+document.body.appendChild(boton);
+
+</script>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Create Element</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		var caja = document.createElement("input");
+		caja.type= "text";
+		caja.placeholder="Ingrese un valor";
+		 
+		document.body.appendChild(caja);
+		 
+		var boton = document.createElement("input");
+		boton.type = "button";
+		boton.value = "Obtener el valor";
+		boton.onclick = function () {
+		 
+		                if(caja.value == "")
+		                {
+		                            alert("Caja vacia");
+		                }
+		                else
+		                {
+		                            if(!isNaN(caja.value))
+		                            {
+		                                       alert("Valor numerico");
+		                            }
+		                            else
+		                            {
+		                                       alert("Valor string");
+		                            }
+		                }
+		 
+		};
+		 
+		document.body.appendChild(boton);
+	</script>
+
+</body>
+</html>
