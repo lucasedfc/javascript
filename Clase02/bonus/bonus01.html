@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Clase 2  - Bonus 01</title>
+</head>
+<body>
+	<script type="text/javascript">
+
+		var usuario = prompt("Ingrese usuario");
+		console.log(usuario);
+
+
+/*
+		if( usuario == "administrador") {
+			alert("usuario administrador no permitido");
+		}
+		else if (usuario.length == 0) {
+			alert("Error cadena vacia");
+		}
+		else if (!isNaN(usuario)) {
+			alert("No se aceptan numeros");
+		}
+		else {
+			alert("Usuario correcto!");
+		}
+*/
+		if(usuario == 'administrador' || usuario.length == 0 || !isNaN(usuario)) {
+			alert("Error");
+		}
+		else {
+			alert("usuario correcto");
+		}
+
+
+	</script>
+</body>
+</html>

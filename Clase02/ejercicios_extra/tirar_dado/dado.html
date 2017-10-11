@@ -1,0 +1,16 @@
+<body></body>
+<script>
+
+	var numero;
+	
+	do
+	{
+		numero = prompt('Ingrese un numero del dado');
+	}
+	while(numero != 1 && numero != 2 && numero != 3 && numero != 4 && numero != 5 && numero != 6);
+
+	var imagen = document.createElement("img");  
+	imagen.src = numero + ".png";
+	document.body.appendChild(imagen);
+		
+</script>
