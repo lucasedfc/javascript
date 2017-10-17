@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lab 01</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+	<table border="1">
+		<tr>
+			<th>Funciona Nro</th>
+			<th>Afirmacion</th>
+			<th>True</th>
+			<th>False</th>
+		</tr>
+
+		<tr>
+			<td>1</td>
+			<td>La función retorna 12.</td>
+			<td></td>
+			<td>X</td>
+
+		</tr>
+
+		<tr>
+			<td>1</td>
+			<td>Si el argumento fuese un string, la lógica de la función sería errónea.</td>
+			<td>X</td>
+			<td></td>
+		</tr>
+
+		<tr>
+			<td>1</td>
+			<td>El resultado de la función se imprimirá en pantalla.</td>
+			<td></td>
+			<td>X</td>
+		</tr>
+
+		<tr>
+			<td>2</td>
+			<td>La variable “aQuien” es un parámetro de la función.</td>
+			<td></td>
+			<td>X</td>
+		</tr>
+
+		<tr>
+			<td>2</td>
+			<td>La función no tiene valor de retorno.</td>
+			<td>X</td>
+			<td></td>
+		</tr>
+
+		<tr>
+			<td>2</td>
+			<td>La función debería ser parametrizada, para ser más dinámica.</td>
+			<td>X</td>
+			<td></td>
+		</tr>
+
+		<tr>
+			<td>3</td>
+			<td>La función tiene 5 parámetros.</td>
+			<td></td>
+			<td>X</td>
+		</tr>
+
+		<tr>
+			<td>3</td>
+			<td>“alumno” es una variable global, con argumento: “Diego”</td>
+			<td></td>
+			<td>X</td>
+		</tr>
+
+		<tr>
+			<td>3</td>
+			<td>La función tiene varias variables locales</td>
+			<td>X</td>
+			<td></td>
+		</tr>
+
+		<tr>
+			<td>3</td>
+			<td>La función arrojará un error, dado que las funciones no admiten argumentos de tipo vector.</td>
+			<td></td>
+			<td>X</td>
+		</tr>
+		
+	</table>
+
+	<script type="text/javascript">
+		function calcular(valor) {
+			var suma= 0;			
+					//		(i = 3;     i <= 3*2;    i++)
+			           for(var i = valor; i <= valor*2;i++)
+			           {
+			                  suma = suma + i;	// suma = 0 + 3; //3
+			                  					// suma = 3 + 4; //4
+			                  					// suma = 7 + 5; //5
+			           }  						// suma = 12 + 6 //6
+			           return suma;
+			}
+
+
+			function saludar() {
+			        var aQuien = 'Juan';
+			        console.log('Buen dia ' + aQuien);
+			}
+
+
+			function promedioNotas(notas,alumno) {
+				var sumaNotas = 0;
+				           for(var i = 0; i < notas.length; i++)
+				           {
+				                   sumaNotas = sumaNotas + notas[i];
+				           }            
+				           var promedio = sumaNotas / notas.length;
+				          console.log(alumno +  ': tu promedio es de: '   + promedio);
+				}
+
+				promedioNotas(new Array(7,2,6,4),'Diego');
+
+			saludar();
+			calcular(3);
+	</script>
+
+</body>
+</html>

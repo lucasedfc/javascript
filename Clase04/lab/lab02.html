@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lab 02</title>
+</head>
+<body>
+
+	<table border="1">
+		<tr>
+			<th>Afirmación</th>
+			<th>AMBAS</th>
+			<th>NINGUNA</th>
+			<th>F1</th>
+			<th>F2</th>
+		</tr>
+
+		<tr>
+			<td>¿Qué función resuelve correctamente su propósito?</td>
+			<td>X</td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+
+		<tr>
+			<td>¿Qué función está más optimizada? (Aunque quizás NO ideal)</td>
+			<td></td>
+			<td></td>
+			<td>X</td>
+			<td></td>
+		</tr>
+
+		<tr>
+			<td>¿Qué función interrumpe iteraciones?</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>X</td>
+		</tr>
+
+		<tr>
+			<td>¿Qué función define más variables locales?</td>
+			<td></td>
+			<td></td>
+			<td>X</td>
+			<td></td>
+		</tr>
+
+		<tr>
+			<td>¿Qué función tiene parámetros?</td>
+			<td>X</td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+
+		<tr>
+			<td>¿Qué función imprime en pantalla su resultado?</td>
+			<td></td>
+			<td>X</td>
+			<td></td>
+			<td></td>
+		</tr>
+
+		<tr>
+			<td>¿Qué función usa estructuras de control?</td>
+			<td>X</td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+
+		<tr>
+			<td>¿Qué función valida el tipo de dato del valor del parámetro?</td>
+			<td></td>
+			<td>X</td>
+			<td></td>
+			<td></td>
+		</tr>		
+
+		<tr>
+			<td>¿Qué función se apoya en el uso de funciones pre-construidas?</td>
+			<td></td>
+			<td>X</td>
+			<td></td>
+			<td></td>
+		</tr>
+
+		<tr>
+			<td>¿Qué función usa la notación Camel Case?</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>X</td>
+		</tr>
+
+		<tr>
+			<td>¿Qué función itera en reversa?</td>
+			<td></td>
+			<td></td>
+			<td>X</td>
+			<td></td>
+		</tr>
+
+
+	</table>
+
+	<script type="text/javascript">
+		function sumatoria_impares(vector_nros)	{
+			var suma = 0;
+			var nro;
+			for(var n = vector_nros.length - 1; n >=0; n--)
+			{
+			      nro = vector_nros[n];
+			     
+			       if(nro % 2 == 1)
+			      {
+			          suma = suma + nro;
+			      }
+			}
+			 
+			return suma;
+			 
+		}
+
+
+		function sumatoriaDeImpares(vectorNros)	{
+			var suma;
+			for(var i = 0; i < vectorNros.length; i++)
+			{
+			      if(i == 0)
+			      {
+			         suma = 0;
+			      }                           
+			 
+			      if(0 == vectorNros[i] % 2)
+			      {
+			         suma = suma + 0;
+			         continue;
+			      }
+			      else
+			      {
+			         suma = vectorNros[i] + suma;
+			      }
+			}
+			 
+			return suma;
+			 
+			}
+
+
+	</script>
+
+</body>
+</html>
