@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Parametros 01</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		var precio = prompt("Ingrese un precio");
+
+		calcularIVA(precio);
+
+		calcularIVA(321);
+
+		var nuevoPrecio = precio * 10;
+
+		calcularIVA( nuevoPrecio );
+
+		function calcularIVA(pcio) {
+			document.write("EL precio con IVA es de $" + (pcio * 1.21) + "<br>" );
+		}
+	</script>
+
+</body>
+</html>

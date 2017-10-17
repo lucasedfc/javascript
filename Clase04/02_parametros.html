@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Modulos</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+
+		/******* LINEA DE EJECUCION PRINCIPAL ****/
+		var precio = prompt("Ingrese un precio");
+		var descuento = 15;
+
+		calcularIVA( precio );
+
+		calcularDescuento( precio, descuento );
+
+		/*****  LINEA DE EJECUCION FUNCIONAL *****/
+
+		function calcularIVA(pcio) {
+			document.write("EL precio con IVA es de $" + (pcio * 1.21) + "<br>");
+		}
+
+		function calcularDescuento(pcio, desc) {
+			var restar = (pcio * desc) / 100;
+			document.write("El precio con descuento es de $" + (pcio - restar) );
+		}
+
+	</script>
+
+</body>
+</html>

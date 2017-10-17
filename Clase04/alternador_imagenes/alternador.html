@@ -1,0 +1,24 @@
+<body></body>
+<script>
+
+function cambiarImagen()
+{
+	imagen_actual++;
+	
+	if(imagen_actual > 5)
+	{
+		imagen_actual = 1;
+	}	
+	
+	imagen.src = "foto" + imagen_actual + ".jpg";
+}
+
+var imagen_actual = 1; // var. global
+
+var imagen = document.createElement("img"); //var global.
+imagen.src = "foto1.jpg";
+document.body.appendChild(imagen);
+
+setInterval("cambiarImagen()",2000);
+
+</script>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Return</title>
+</head>
+<body>
+
+
+	<script type="text/javascript">
+
+		/******* LINEA DE EJECUCION PRINCIPAL ****/
+		var precio = prompt("Ingrese un precio");
+		var descuento = 15;
+
+		var precioConIVA = calcularIVA( precio );
+
+		var precioConDesc = calcularDescuento( precio, descuento );
+
+		mostrarResultado( precioConIVA, precioConDesc);
+
+		/*****  LINEA DE EJECUCION FUNCIONAL *****/
+
+		function calcularIVA(pcio) {
+			return pcio * 1.21;
+		}
+
+		function calcularDescuento(pcio, desc) {
+			var restar = (pcio * desc) / 100;
+			return precio - restar;
+		}
+
+		function mostrarResultado(pcioIVA, pcioDesc) {
+			document.write("El precio con IVA es de $" + pcioIVA + "<br>");
+			document.write("El precio con descuento es de $" + pcioDesc );
+		}
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Variables problematicas</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var precio = 100; //Variable Global
+		alert("Precio: $" + precio);
+
+		var total = calcularIVA( precio );
+
+		function calcularIVA(pcio) {
+			var total = pcio * 1.21; //Variable Local
+			return total;
+		}
+
+		//alert( total );
+		alert("El total es de $" + total);
+	</script>
+	
+
+</body>
+</html>

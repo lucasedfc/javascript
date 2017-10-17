@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tipos Variables</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		var global = "soy global" //Variable global
+
+		function saludo() {
+			var nombre = "Pedro"; //Variable local
+		}
+
+		function procesar() {
+			global = "Cambio de valor";
+		}
+
+		saludo();
+
+		console.log("Global " + global);
+
+		console.log(nombre);
+
+		procesar();
+		console.log("Luego de procesar " + global);
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<body></body>
+<script>
+
+function colocarBandera(item)
+{
+	if(item != "Coloque una bandera")
+	{
+	
+	var bandera = document.createElement("img");
+	bandera.src = item + ".png";
+	document.body.appendChild(bandera);
+	
+	}
+}
+
+var desplegable = document.createElement('select');
+desplegable.onchange = function () { colocarBandera(this.value); };
+
+var opciones = new Array("Argentina","Francia","Alemania");
+
+var opcion = document.createElement('option');
+opcion.innerHTML = "Coloque una bandera";
+desplegable.appendChild(opcion);
+
+for(var i = 0; i < opciones.length; i++)
+{
+	opcion = document.createElement("option");
+	opcion.innerHTML = opciones[i];
+	desplegable.appendChild(opcion);
+}
+
+document.body.appendChild(desplegable);
+document.write("<br>");
+
+</script>

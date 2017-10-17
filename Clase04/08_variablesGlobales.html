@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ambitos 2</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+
+		var producto = "Teclado";
+
+		if(confirm("Desea saber el nombre del producto")){
+			alert("El producto es " + producto);
+			producto = prompt("Ingrese un nuevo nombre de producto");
+		}
+
+		mostrarProducto();
+
+		function mostrarProducto() {
+			alert("El nombre del producto es: " + producto );
+		}
+
+
+	</script>
+
+</body>
+</html>

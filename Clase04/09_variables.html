@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Variables</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		var nombre = prompt("Ingrese una nombre: ");
+		var marca = prompt("Ingrese una marca: ");
+		var precio = prompt("Ingrese una precio: ");
+
+		mostrarProducto();
+
+		function mostrarProducto() {
+			var impuesto = 1.21;
+			precioConImpuesto = precio * impuesto;
+			var msg = ("El producto " + nombre + " de la marca " + marca + " tiene un precio de $" + precioConImpuesto);
+			document.write(msg);
+		}
+
+		document.write("Precio sin impuesto $" + precio);
+		document.write("Precio con impuesto $" + precioConImpuesto);
+	</script>
+
+</body>
+</html>
