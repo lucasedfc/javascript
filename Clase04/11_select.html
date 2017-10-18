@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Select</title>
+</head>
+<body>
+
+	<div id="myDiv"></div>
+	<script type="text/javascript">
+		var opciones = ["Seleccione","A", "B", "C"];
+
+		var lista = document.createElement("select");
+		lista.id = 'mySelect';
+		document.querySelector("#myDiv").appendChild(lista);
+
+		for (var i = 0; i < opciones.length; i++) {
+			var option = document.createElement("option");
+			if(i == 0) {
+				option.disabled = 'disabled';
+				option.selected = 'selected';
+			}
+			
+			option.value = opciones[i];
+			option.text = opciones[i];
+
+			document.querySelector("#mySelect").appendChild(option);
+
+		}
+
+
+		document.querySelector("#mySelect").onchange = function() {
+			alert("Seleccionado " + document.querySelector("#mySelect").value);
+		}
+
+	</script>
+</body>
+</html>

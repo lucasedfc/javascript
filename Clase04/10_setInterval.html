@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>set Interval</title>
+</head>
+<body>
+	<input id="stop" type="button" name="" value="detener intervalo">
+
+	<script type="text/javascript">
+		function saludo() {
+			alert("hola");
+		}
+		var intervaloId = setInterval(saludo, 2000);
+
+		document.querySelector("#stop").onclick = function() {
+			clearInterval(intervaloId);
+		}
+	</script>
+
+</body>
+</html>

@@ -14,7 +14,7 @@ function colocarBandera(item)
 }
 
 var desplegable = document.createElement('select');
-desplegable.onchange = function () { colocarBandera(this.value); };
+desplegable.onchange = function () { colocarBandera(document.querySelector("select").value); };
 
 var opciones = new Array("Argentina","Francia","Alemania");
 
