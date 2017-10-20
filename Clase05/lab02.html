@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lab 02</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		var formulario = document.createElement("form");
+		formulario.action = "mail.php";
+		formulario.mehod = "get";
+
+		document.body.appendChild(formulario);
+
+		var estados = ["Soltero", "Divorciado", "Casado", "Vuido"];
+
+		for(i = 0; i < estados.length; i++) {
+			var valor = estados[i];
+			var leyenda = document.createTextNode(valor);
+
+			var opcion = document.createElement("input");
+			opcion.type = "radio";
+			opcion.value = valor;
+			opcion.name = "estados";
+
+			formulario.appendChild(leyenda);
+			formulario.appendChild(opcion);
+		}
+
+		var boton = document.createElement("input");
+		boton.type = "button";
+		boton.value = "Verificar";
+		boton.onclick = function() {
+			verificar();
+		}
+
+		formulario.appendChild(boton);
+
+		function verificar() {
+
+			var elem = document.querySelectorAll("input");
+
+			for(i = 0; i < elem.length; i++) {
+				if(elem[i].checked && elem[i].type == "radio") {
+					alert("Seleccionado " + elem[i].value);
+					formulario.submit();
+				}
+			}
+			
+			alert("No se ha Seleccionado ningun valor");
+			return false;
+		}
+
+
+	</script>
+
+</body>
+</html>

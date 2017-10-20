@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form 01</title>
+</head>
+<body>
+<!--
+	<form method="post" action="mail.php">
+		<input type="password" name="">	
+		<input type="button" name="" value="Enviar">
+	</form>
+-->
+
+	<script type="text/javascript">
+			var formulario = document.createElement("form");
+			formulario.method = "post";
+			formulario.action = "mail.php";
+
+			document.body.appendChild(formulario);
+
+			var pwd = document.createElement("input");
+			pwd.type = "password";
+			pwd.id = "pwd";
+
+			formulario.appendChild(pwd);
+
+			var boton = document.createElement("input");
+			boton.type = "button";
+			boton.value = "Enviar";
+			boton.id = "send";
+			boton.onclick = function(){
+				verificar();
+			}
+
+			formulario.appendChild(boton);
+
+			function verificar() {
+				var pwd_long = pwd.value.length;
+				
+				if(pwd_long <6){
+					alert("Contraseña invalida");
+				}
+				else{
+					alert("Contraseña correcta");
+					formulario.submit();
+				}
+			}
+
+	</script>
+
+</body>
+</html>
