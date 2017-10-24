@@ -44,9 +44,10 @@
 				if(elem[i].checked && elem[i].type == "radio") {
 					alert("Seleccionado " + elem[i].value);
 					formulario.submit();
+					return true;
 				}
 			}
-			
+
 			alert("No se ha Seleccionado ningun valor");
 			return false;
 		}
