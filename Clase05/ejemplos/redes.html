@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Redes</title>
+</head>
+<body>	
+	<script type="text/javascript">
+		function contar(){
+			var elem = document.querySelectorAll("input");
+			var tildados = 0;
+			for(i = 0; i < elem.length; i++) {
+
+				if(elem[i].type == 'checkbox' && elem[i].checked) {
+					tildados++;
+				}
+			}
+			alert("La cantidad de tildados es de " + tildados);
+		}
+
+		function destildados(){
+			var elem = document.querySelectorAll("input");
+			var destildados = 0;
+			for(i = 0; i < elem.length; i++) {
+
+				if(elem[i].type == 'checkbox' && !elem[i].checked) {
+					destildados++;
+				}
+			}
+			alert("La cantidad de destildados es de " + destildados);
+		}
+
+		function destildar() {
+			var elem = document.querySelectorAll("input");
+			for(i = 0; i < elem.length; i++) {
+				if(elem[i].type == 'checkbox' && elem[i].checked){
+					elem[i].checked = false;
+				}
+			}
+		}
+
+		function tildar(){
+			var elem = document.querySelectorAll("input");
+			for(i = 0; i < elem.length; i++) {
+				if(elem[i].type == 'checkbox' && !elem[i].checked) {
+					elem[i].checked = true;
+				}
+			}
+		}
+
+		var f = document.createElement("form");
+		f.method = "get";
+		f.action = "codigo.php";
+
+		document.body.appendChild(f);
+
+		var redes = ["Twitter", "Facebook", "Instagram"];
+
+		for (i = 0; i < redes.length; i++) {
+			var texto = document.createTextNode(redes[i]);
+
+			var opciones = document.createElement("input");
+			opciones.name = "redes";
+			opciones.type = "checkbox";
+
+			f.appendChild(texto);
+			f.appendChild(opciones);
+		}
+
+		var contarTildados = document.createElement("input");
+		contarTildados.value = "contarTildados";
+		contarTildados.type = "button";
+		contarTildados.onclick = function() {
+			contar();
+		}
+		f.appendChild(contarTildados);
+
+
+		var contarDestildados = document.createElement("input");
+		contarDestildados.value = "contarDestildados";
+		contarDestildados.type = "button";
+		contarDestildados.onclick = function() {
+			destildados();
+		}
+		f.appendChild(contarDestildados);
+
+		var destildarTodo = document.createElement("input");
+		destildarTodo.value = "destildarTodo";
+		destildarTodo.type = "button";
+		destildarTodo.onclick = function() {
+			destildar();
+		}
+		f.appendChild(destildarTodo);
+
+		var tildarTodo = document.createElement("input");
+		tildarTodo.value = "tildarTodo";
+		tildarTodo.type = "button";
+		tildarTodo.onclick = function() {
+			tildar();
+		}
+		f.appendChild(tildarTodo);
+
+	</script>
+
+</body>
+</html>

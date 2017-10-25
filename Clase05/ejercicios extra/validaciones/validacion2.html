@@ -1,0 +1,56 @@
+<body></body>
+<script>
+
+//El ejercicio propone validar un numero positivo, y entero:
+
+function esEntero(valor)
+{
+	return (valor - Math.floor(valor) == 0);
+	//le resto al nro su parte entera, y verifico que de cero.
+}
+
+function validarCampo(valor,formu)
+{
+	if(isNaN(valor))
+	{
+		alert('Error');
+		return false;
+	}
+	else
+	{
+		valor = Number(valor);
+		
+		if(valor <= 0 || !esEntero(valor))
+		{
+			alert('Error');
+			return false;
+		}
+		else
+		{
+			alert('Correcto !');
+			formu.submit();
+			return true;
+		}
+	}
+}
+
+var f = document.createElement("form");
+f.setAttribute("method","post");
+f.setAttribute("action","submit_url.php");
+
+f.appendChild(document.createTextNode("Ingrese un numero positivo y entero: "));
+
+var box = document.createElement("input");
+box.setAttribute("type","text");
+box.setAttribute("name","caja");
+f.appendChild(box);
+
+var boton = document.createElement("input");
+boton.type = "button";
+boton.value = "Verificar datos";
+boton.onclick = function () {	validarCampo(box.value,f);	};
+f.appendChild(boton);
+
+document.body.appendChild(f);
+	
+</script>

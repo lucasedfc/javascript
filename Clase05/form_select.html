@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Select</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+
+		var form = document.createElement("form");
+
+		form.method = "get";
+		form.action = "codigo.php";
+		document.body.appendChild(form);
+
+		var lista = ["Seleccione", "Soltero", "Divorciado", "Casado", "Viudo"];
+
+		var select = document.createElement("select");
+		select.name = "estado";
+		form.appendChild(select);
+
+		for(i = 0; i < lista.length; i++) {
+			var option = document.createElement("option");
+
+			option.text = lista[i];
+			option.value = lista[i];
+
+			select.appendChild(option);
+		}
+
+		var boton = document.createElement("input");
+		boton.value = "Enviar";
+		boton.type = "button";
+		form.appendChild(boton);
+		boton.onclick = function() {
+			validar(form);
+		}
+
+		function validar(f){
+			
+			if(f.estado.selectedIndex == 0) { 
+				alert("Error");
+				f.estado.style.borderColor = "red";
+			}
+			else {
+				alert("Selecciono " + f.estado.value);
+				f.estado.style.borderColor = "green";
+			}
+		}
+	</script>
+
+</body>
+</html>

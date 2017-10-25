@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Display</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+
+		function displayImagen(img) {
+			if(img.style.display == 'block') {
+				img.style.display = 'none';
+			}
+			else {
+				img.style.display = 'block';
+			}
+		}
+		
+		var imagen = document.createElement("img");
+		imagen.src = 'imagen.jpg';
+		document.body.appendChild(imagen);
+		/*
+		var boton = document.createElement("input");
+		boton.value = 'Mostrar/Ocultar';
+		boton.type = 'button';
+		boton.onclick = function() {
+			 displayImagen(imagen);
+		}
+		document.body.appendChild(boton);
+		*/
+
+		setInterval('displayImagen(imagen)', 1000);
+
+
+	</script>
+
+</body>
+</html>

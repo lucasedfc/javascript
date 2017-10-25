@@ -1,0 +1,24 @@
+<body></body>
+<script>
+
+function ocultarMostrarImagen(imagen)
+{	
+	if(imagen.style.display == 'none')
+	{
+		imagen.style.display = 'block';
+	}
+	else
+	{
+		imagen.style.display = 'none';
+	}
+}
+
+var img = document.createElement('img');
+img.src = 'imagen.jpg';
+
+document.body.appendChild(img);
+
+setInterval("ocultarMostrarImagen(img)",1500);
+
+
+</script>

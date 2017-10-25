@@ -39,12 +39,21 @@
 				
 				if(pwd_long <6){
 					alert("Contraseña invalida");
+					//pwd.style.borderColor = 'red';
+					coloear(pwd, 'red', 'black');
 				}
 				else{
 					alert("Contraseña correcta");
-					formulario.submit();
+					pwd.style.borderColor = 'green';
+					setTimeout(function(){formulario.submit()}, 3000);
+					
 				}
 			}
+
+			function coloear(elem, borde, color) {
+				elem.style.borderColor = borde;
+				elem.style.color = color;
+			}	
 
 	</script>
 

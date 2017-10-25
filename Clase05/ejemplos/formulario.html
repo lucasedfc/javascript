@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formulario HTML</title>
+</head>
+<body>
+	
+</body>
+
+<script type="text/javascript">
+	
+	var f = document.createElement("form");
+f.setAttribute("method","post");
+f.setAttribute("action","submit_url.php");
+ 
+var send = document.createElement("input");
+send.setAttribute("type","submit");
+send.setAttribute("value","Enviar");
+ 
+var reset = document.createElement("input");
+reset.setAttribute("type","reset");
+reset.setAttribute("value","Resetear");
+ 
+f.appendChild(send);
+f.appendChild(reset);
+document.body.appendChild(f);
+
+var caja = document.createElement("input");
+caja.setAttribute("type","text");
+caja.setAttribute("name","username");
+caja.setAttribute("placeholder","su username aqui..");
+ 
+f.appendChild(caja);
+
+
+var caja_pass = document.createElement("input");
+caja_pass.setAttribute("type","password");
+caja_pass.setAttribute("name","pass");
+caja_pass.setAttribute("placeholder","su password aqui..");
+ 
+f.appendChild(caja_pass);
+
+var items = new Array("item 1","item 2","item 3");
+ 
+for(var i = 0; i < items.length; i++)
+{
+                var valor = items[i];
+                
+                var checkbox = document.createElement("input");
+                
+                checkbox.setAttribute("type","checkbox");
+                checkbox.setAttribute("value",valor);
+                checkbox.setAttribute("name","items[]");
+                checkbox.setAttribute("checked",true);
+                
+                f.appendChild(document.createTextNode(valor));
+                f.appendChild(checkbox);
+ 
+}
+
+var items = new Array("item 1","item 2","item 3");
+ 
+for(var i = 0; i < items.length; i++)
+{
+                var valor = items[i];
+                
+                var radio = document.createElement("input");
+                
+                radio.setAttribute("type","radio");
+                radio.setAttribute("value",valor);
+                radio.setAttribute("name","item");
+                
+                f.appendChild(document.createTextNode(valor));
+                f.appendChild(radio);
+ 
+}
+
+
+
+var combo = document.createElement("select");
+combo.setAttribute("name","lista_opciones");
+ 
+var opciones = new Array("opcion 1","opcion 2","opcion 3");
+ 
+for(var i = 0; i < opciones.length; i++)
+{
+                var valor = opciones[i];
+ 
+                var opcion = document.createElement("option");
+                opcion.value = valor;
+                opcion.text  = valor;
+ 
+                combo.appendChild(opcion);
+}
+ 
+f.appendChild(combo);
+
+var textarea = document.createElement("textarea");
+textarea.setAttribute("name","textocaja");
+textarea.setAttribute("placeholder","ingrese su texto aqui..");
+f.appendChild(textarea);
+
+
+var file = document.createElement("input");
+file.setAttribute("type","file");
+file.setAttribute("name","archivo_adjunto");
+ 
+f.appendChild(file);
+</script>
+</html>

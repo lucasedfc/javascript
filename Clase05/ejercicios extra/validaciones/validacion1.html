@@ -1,0 +1,53 @@
+<body></body>
+<script>
+
+// Validar que un campo tenga un valor con al menos 1 caracter numerico:
+
+function validarCampo(valor,formu)
+{
+	if(valor == '')
+	{
+		alert('Error');
+		return false;
+	}
+	else
+	{
+		for(var nro = 0; nro <= 9; nro++)
+		{
+			for(var l = 0; l < valor.length; l++)
+			{
+				var caracter = valor.charAt(l);	//hol4
+				if(caracter == nro)
+				{
+					alert('Correcto !');
+					formu.submit();
+					return true;
+				}
+			}
+		}
+		
+		alert('Error');
+		return false;
+	}
+}
+
+var f = document.createElement("form");
+f.setAttribute("method","post");
+f.setAttribute("action","submit_url.php");
+
+f.appendChild(document.createTextNode("Ingrese un valor con al menos 1 caracter numerico: "));
+
+var box = document.createElement("input");
+box.setAttribute("type","text");
+box.setAttribute("name","caja");
+f.appendChild(box);
+
+var boton = document.createElement("input");
+boton.type = "button";
+boton.value = "Verificar datos";
+boton.onclick = function () { validarCampo(box.value,f) };
+f.appendChild(boton);
+
+document.body.appendChild(f);
+	
+</script>
